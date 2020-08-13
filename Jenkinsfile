@@ -10,6 +10,7 @@ pipeline {
 
       }
       steps {
+        sh 'cd /var/lib/jenkins/workspace/aem-test-samples_test-pipeline/smoke'
         sh 'mvn clean compile'
       }
     }
