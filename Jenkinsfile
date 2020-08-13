@@ -5,9 +5,9 @@ pipeline {
       steps {
         echo 'This step is for compilation'
         sh '''
-                    echo "PATH = ${PATH}"
-                    echo "M2_HOME = ${M2_HOME}"
-                '''
+              echo "PATH = ${PATH}"
+              echo "M2_HOME = ${M2_HOME}"
+              '''
       }
     }
 
