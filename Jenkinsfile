@@ -7,7 +7,6 @@ pipeline {
   stages {
     stage('build initialization') {
       steps {
-        step{
         echo 'This step is for compilation'
         sh '''
                     echo "PATH = ${PATH}"
@@ -16,6 +15,4 @@ pipeline {
         }
       }
     }
-
-  }
 }
