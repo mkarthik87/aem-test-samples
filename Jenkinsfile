@@ -6,11 +6,7 @@ pipeline {
         docker 'maven:3-alpine'
       }
       steps {
-        echo 'This step is for compilation'
-        sh '''
-              echo "PATH = ${PATH}"
-              echo "M2_HOME = ${M2_HOME}"
-              '''
+        sh 'mvn clean compile'
       }
     }
 
