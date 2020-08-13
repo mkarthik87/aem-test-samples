@@ -16,4 +16,14 @@ pipeline {
     maven 'maven'
     jdk 'jdk8'
   }
+  post {
+    success {
+      echo 'Build success'
+    }
+
+    failure {
+      echo 'Build failed'
+    }
+
+  }
 }
