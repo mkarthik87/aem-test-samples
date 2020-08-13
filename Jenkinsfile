@@ -1,9 +1,17 @@
 pipeline {
   agent none
+   tools { 
+        maven 'Maven 3.6.3' 
+        jdk 'jdk8' 
+    }
   stages {
-    stage('build') {
-      steps {
+    stage('build initialization') {
+      step {
         echo 'This step is for compilation'
+        sh '''
+                    echo "PATH = ${PATH}"
+                    echo "M2_HOME = ${M2_HOME}"
+                '''
       }
     }
 
