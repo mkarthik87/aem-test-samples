@@ -6,12 +6,14 @@ pipeline {
     }
   stages {
     stage('build initialization') {
-      step {
+      steps {
+        step{
         echo 'This step is for compilation'
         sh '''
                     echo "PATH = ${PATH}"
                     echo "M2_HOME = ${M2_HOME}"
                 '''
+        }
       }
     }
 
