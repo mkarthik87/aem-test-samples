@@ -1,7 +1,10 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage('build initialization') {
+      agent {
+        docker 'maven:3-alpine'
+      }
       steps {
         echo 'This step is for compilation'
         sh '''
@@ -11,10 +14,6 @@ pipeline {
       }
     }
 
-  }
-  tools {
-    maven 'maven'
-    jdk 'jdk8'
   }
   post {
     success {
